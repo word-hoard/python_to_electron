@@ -1,0 +1,14 @@
+{
+  "name": "whispers",
+  "version": "1.0.0",
+  "description": "python-electron together",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ./main.js"
+  },
+  "author": "Mark Langford",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "python-shell": "^1.0.6"
+  }
+}

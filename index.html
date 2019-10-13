@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="potion.css">
+</head>
+<body>
+    <h1>Python to Electron example</h1>
+    <p>Using "python-shell"</p>
+    <div id="dialog">
+        
+        <input type="text" name="pyin" id="pyin" value="hello"><br>
+        <button id="ask">ask python</button><br>
+        <button id="lazy">python makes a lazy button</button>
+    </div>
+    <div id="py_out"> </div>
+    <script>
+        const { PythonObject } = require('./scripts/pythonic');
+        let Py = new PythonObject('./scripts/whisper.py', 'py_out');
+
+        const toPy = () => {
+                let { value } = document.getElementById("pyin");
+                Py.send(`hello ${value}`);
+            };
+        const PyButton = () => {
+            Py.send("button");
+        };
+
+        const add_click = (id, fn) => {
+            document.getElementById(id).addEventListener('click', fn)
+        };
+        add_click('ask', toPy);
+        add_click('lazy', PyButton);
+    </script>
+</body>
+</html>
