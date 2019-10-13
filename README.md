@@ -18,7 +18,7 @@
 
 In this example I wanted to take a html input, channel it directly to my python process and display the result back on my html page with a minimal amount of javaScript.
 
-The downside I found to using `python-shell` was that using stdout as my communication medium, and that is not a proper messaging system. `python-shell` assumes each new line of output from the python process is a discrete response, and I wanted to use multiline output from python to generate elaborate chunks of html and svg. So you need to cache the lines as they come in, and have a simple text flag sent from python to say when a new message (`"new::msg"`) _really_ started. All of this can be put together in a quick wrapper JS class called `pythonic.js` in the `scripts` folder of my project:
+The downside I found to using `python-shell` was that I was using stdout as my communication medium, and that is not a proper messaging system. `python-shell` assumes each new line of output from the python process is a discrete response, and I wanted to use multiline output from python to generate elaborate chunks of html and svg. So you need to cache the lines as they come in, and have a simple text flag sent from python to say when a new message (`"new::msg"`) _really_ started. All of this can be put together in a quick wrapper JS class called `pythonic.js` in the `scripts` folder of my project:
 
 
     const { PythonShell } = require('python-shell');
