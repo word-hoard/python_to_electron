@@ -8,7 +8,7 @@
 
 ### node
 - node itself
-- a basic `electron` app you have already made. (sorry I know this is a bit of a 'first catch your rabbit' section of 'how to make rabbit stew', but there are many excellent electron tutorials out there. This article is specifically about bringing in the python element)
+- a basic `electron` app such as the one in this repo.
 - [`python-shell`](https://www.npmjs.com/package/python-shell) 
 
 ### python
