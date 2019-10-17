@@ -7,7 +7,7 @@
 ## Ingredients:
 
 ### node
-- node itself
+- node and electron
 - a basic `electron` app such as the one in this repo.
 - [`python-shell`](https://www.npmjs.com/package/python-shell) 
 
